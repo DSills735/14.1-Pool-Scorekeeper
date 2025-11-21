@@ -32,6 +32,29 @@ void PlayGame()
 
         Console.WriteLine("Welcome to a new game! Who is going to break? Enter 1 or 2");
     }
+    else if (p1Wins == 2 || p2Wins == 2)
+    {
+        if (p1Wins == 2)
+        {
+            Console.Clear();
+            Console.WriteLine($"{player1} has won the frame by a score of {p1Wins} to {p2Wins}.");
+            Console.WriteLine();
+            Console.WriteLine("-------------------------------------");
+            Console.WriteLine();
+            Console.WriteLine("Welcome back! Who is going to break? Enter 1 or 2");
+        }
+        else
+        {
+            Console.Clear();
+            Console.WriteLine($"{player2} has won the frame by a score of {p2Wins} to {p1Wins}.");
+            Console.WriteLine();
+            Console.WriteLine("-------------------------------------");
+            Console.WriteLine();
+            Console.WriteLine("Welcome back! Who is going to break? Enter 1 or 2");
+        }
+        p1Wins = 0;
+        p2Wins = 0;
+    }
     else
     {
         Console.WriteLine("Welcome back! Who is going to break? Enter 1 or 2");

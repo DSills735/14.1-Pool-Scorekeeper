@@ -1,0 +1,15 @@
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\bin\Release\net9.0\Scorekeeper Straight Pool.exe
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\bin\Release\net9.0\Scorekeeper Straight Pool.deps.json
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\bin\Release\net9.0\Scorekeeper Straight Pool.runtimeconfig.json
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\bin\Release\net9.0\Scorekeeper Straight Pool.dll
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\bin\Release\net9.0\Scorekeeper Straight Pool.pdb
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Release\net9.0\Scorekeeper Straight Pool.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Release\net9.0\Scorekeeper Straight Pool.AssemblyInfoInputs.cache
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Release\net9.0\Scorekeeper Straight Pool.AssemblyInfo.cs
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Release\net9.0\Scorekeeper Straight Pool.csproj.CoreCompileInputs.cache
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Release\net9.0\Scorekeeper Straight Pool.sourcelink.json
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Release\net9.0\Scorekeeper Straight Pool.dll
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Release\net9.0\refint\Scorekeeper Straight Pool.dll
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Release\net9.0\Scorekeeper Straight Pool.pdb
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Release\net9.0\Scorekeeper Straight Pool.genruntimeconfig.cache
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Release\net9.0\ref\Scorekeeper Straight Pool.dll
