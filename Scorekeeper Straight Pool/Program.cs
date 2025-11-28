@@ -26,6 +26,8 @@ void PlayStraightPool()
     Console.Clear();
     player1Score = 0;
     player2Score = 0;
+    p1Max = 0;
+    p2Max = 0;
 
     DisplayWins();
     CheckWins();
@@ -33,9 +35,23 @@ void PlayStraightPool()
 
 void Player1Turn()
 {
-
+    bool validInput = false;
+    int score = 0;
     Console.WriteLine($"{player1}, It is your turn! Enter your score when you are finished. You currently have {player1Score} points.");
-    int score = Convert.ToInt32(Console.ReadLine());
+    
+    while (!validInput)
+    {
+        string pointScored= Console.ReadLine()!;
+        if(int.TryParse(pointScored, out score))
+        {
+            validInput = true;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please input how many points you scored.");
+        }
+    }
+    
     if (score > p1Max)
     {
         p1Max = score;
@@ -70,9 +86,22 @@ void Player1Turn()
 }
 void Player2Turn()
 {
-
+    int score = 0;
+    bool validInput = false;
     Console.WriteLine($"{player2}, It is your turn! Enter your score when you are finished. You currently have {player2Score} points.");
-    int score = Convert.ToInt32(Console.ReadLine());
+    
+    while (!validInput)
+    {
+        string pointScored= Console.ReadLine()!;
+        if(int.TryParse(pointScored, out score))
+        {
+            validInput = true;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please input how many points you scored.");
+        }
+    }
 
     if (score > p2Max)
     {

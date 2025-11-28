@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Scorekeeper Straight Pool")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+532c9fec985aad2ff5c0a8799a80958a8d3c37e5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fcc6279e00fb27f3e351164d88ebbfded01994d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Scorekeeper Straight Pool")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Scorekeeper Straight Pool")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
