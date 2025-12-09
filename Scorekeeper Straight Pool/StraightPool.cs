@@ -1,16 +1,16 @@
 
 public class StraightPool
 {
-
-    internal static void PlayStraightPool(string player1, string player2)
+        
+    internal static void PlayStraightPool(string player1, string player2, int p2Wins, int p1Wins)
     {
         int maxScore = 0;
         int player1Score = 0;
         int player2Score = 0;
         int p1Max = 0;
         int p2Max = 0;
-        int p2Wins = 0;
-        int p1Wins = 0;
+        
+
         Console.WriteLine("Welcome to Straight Pool. What score would you like to play to?");
         maxScore = Convert.ToInt32(Console.ReadLine());
         Console.Clear();
@@ -54,6 +54,7 @@ public class StraightPool
                     }
                     player1Score += roundScore;
                     Console.WriteLine($"{player1} scored {roundScore}. You now have {player1Score} points.");
+                    Console.WriteLine();
                     endCondition = ScoreUpdater.WinCondition(player1Score, maxScore);
                     player = 2;
                 }
@@ -66,6 +67,7 @@ public class StraightPool
                     }
                     player2Score += roundScore;
                     Console.WriteLine($"{player2} scored {roundScore}. You now have {player2Score} points.");
+                    Console.WriteLine();
                     endCondition = ScoreUpdater.WinCondition(player2Score, maxScore);
                     player = 1;
                 }
@@ -76,11 +78,13 @@ public class StraightPool
             if (winner == 1)
             {
                 Console.WriteLine($"{player1} won with a score of {player1Score} to {player2Score}.");
+                Console.WriteLine();
                 p1Wins += 1;
             }
             else
             {
                 Console.WriteLine($"{player2} won with a score of {player2Score} to {player1Score}.");
+                Console.WriteLine();
                 p2Wins += 1;
             }
             ScoreHistory.DisplayWins(player1, player2, p1Wins, p2Wins);
@@ -96,7 +100,7 @@ public class StraightPool
             while(!validInput){
             if (response == "1")
             {
-                PlayStraightPool(player1, player2);
+                PlayStraightPool(player1, player2, p2Wins, p1Wins);
                 validInput = true;
             }
             else if(response == "2")

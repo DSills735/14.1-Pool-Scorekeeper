@@ -29,13 +29,15 @@
 
         string userInput = Console.ReadLine()!;
         bool validInput = false;
+        int p2Wins = 0;
+        int p1Wins = 0;
 
         while (!validInput)
         {
 
             if (userInput == "1")
             {
-                StraightPool.PlayStraightPool(player1, player2);
+                StraightPool.PlayStraightPool(player1, player2, p2Wins, p1Wins);
                 validInput = true;
                 Console.Clear();
             }
