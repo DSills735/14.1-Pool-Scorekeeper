@@ -1,15 +1,12 @@
-﻿using System.Transactions;
-
-
-public static class Program
+﻿public static class Program
 {
 
     internal static void Main(string[] args)
     {
-        MainMenu();
+        Initialization();
     }
 
-    internal static void MainMenu()
+    internal static void Initialization()
     {
         Console.WriteLine("Welcome to the pool tracker. Please enter the player names.");
         Console.WriteLine("Enter the name of Player 1:");
@@ -21,7 +18,11 @@ public static class Program
         string player2 = Console.ReadLine()!;
 
         Console.Clear();
+        MainMenu(player1, player2);
+    }
 
+    internal static void MainMenu(string player1, string player2)
+    {
         Console.WriteLine($"{player1} and {player2}, what game do you want to play? Pick an option from below.");
         Console.WriteLine("1. Play Straight pool");
         Console.WriteLine("2. Play snooker -- NOT ACTIVE YET");
@@ -32,14 +33,15 @@ public static class Program
         while (!validInput)
         {
 
-        if (userInput == "1"){
-            StraightPool.PlayStraightPool(player1, player2);
-            validInput = true;
-            Console.Clear();
-        }
-        else if(userInput == "2")
+            if (userInput == "1")
             {
-                
+                StraightPool.PlayStraightPool(player1, player2);
+                validInput = true;
+                Console.Clear();
+            }
+            else if (userInput == "2")
+            {
+
                 //This will lead to snooker eventually.
                 Console.WriteLine("Snooker is not open yet. Enter an option from above.");
                 userInput = Console.ReadLine()!;
@@ -52,5 +54,4 @@ public static class Program
 
         }
     }
-    }
-    
+}

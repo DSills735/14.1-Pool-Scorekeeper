@@ -42,7 +42,7 @@ public class StraightPool
             }
             bool endCondition = false;
 
-            //this should loop the game until the end condition is met. This will be the max score input. 
+            //this will loop the game until the end condition (max score) is met or exceeded. This will be the max score input. 
             while (!endCondition)
             {
                 if (player == 1)
@@ -86,17 +86,33 @@ public class StraightPool
             ScoreHistory.DisplayWins(player1, player2, p1Wins, p2Wins);
             ScoreHistory.DisplayScores(player1, player2, p1Max, p2Max);
 
-            Console.WriteLine("Play again? Y/N");
+            Console.WriteLine("Please choose an option from below:");
+            Console.WriteLine("\t1: Play Straight Pool again?");
+            Console.WriteLine("\t2: Play another game.");
+            Console.WriteLine("\t3: Quit the application.");
 
             string response = Console.ReadLine()!;
-
-            if (response.Trim().ToLower() == "y")
+            validInput = false;
+            while(!validInput){
+            if (response == "1")
             {
                 PlayStraightPool(player1, player2);
+                validInput = true;
+            }
+            else if(response == "2")
+            {
+                Program.MainMenu(player1, player2);
+                validInput = true;
+            }
+            else if(response == "3")
+            {
+                Environment.Exit(0);
             }
             else
             {
-                Environment.Exit(0);
+                Console.WriteLine("Invalid entry. Please try again.");
+                response = Console.ReadLine()!;
+            }
             }
         }
     }

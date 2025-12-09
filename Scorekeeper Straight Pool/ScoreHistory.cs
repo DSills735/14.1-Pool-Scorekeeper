@@ -1,4 +1,5 @@
-
+//this class is simply used to display the stats from the session after each game
+//eventually I think I will add a database to store history permanently. 
 public static class ScoreHistory
 {
      internal static void DisplayWins(string player1, string player2, int p1Wins, int p2Wins)
