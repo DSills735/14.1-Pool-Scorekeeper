@@ -25,7 +25,7 @@
     {
         Console.WriteLine($"{player1} and {player2}, what game do you want to play? Pick an option from below.");
         Console.WriteLine("1. Play Straight pool");
-        Console.WriteLine("2. Play snooker -- NOT ACTIVE YET");
+        Console.WriteLine("2. Play snooker");
 
         string userInput = Console.ReadLine()!;
         bool validInput = false;
@@ -41,10 +41,8 @@
             }
             else if (userInput == "2")
             {
-
-                //This will lead to snooker eventually.
-                Console.WriteLine("Snooker is not open yet. Enter an option from above.");
-                userInput = Console.ReadLine()!;
+                Snooker.PlaySnooker(player1, player2);
+                //userInput = Console.ReadLine()!;
             }
             else
             {
