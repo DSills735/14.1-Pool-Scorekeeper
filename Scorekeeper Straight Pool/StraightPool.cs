@@ -53,7 +53,7 @@ public class StraightPool
                         p1Max = ScoreUpdater.MaxScoreUpdater(roundScore);
                     }
                     player1Score += roundScore;
-                    Console.WriteLine($"{player1} scored {roundScore}. You now have {player1Score} points.");
+                    Console.WriteLine($"{player1} scored {roundScore}. The score is now {player1}: {player1Score} to {player2}: {player2Score}");
                     Console.WriteLine();
                     endCondition = ScoreUpdater.WinCondition(player1Score, maxScore);
                     player = 2;
@@ -66,7 +66,7 @@ public class StraightPool
                         p2Max = ScoreUpdater.MaxScoreUpdater(roundScore);
                     }
                     player2Score += roundScore;
-                    Console.WriteLine($"{player2} scored {roundScore}. You now have {player2Score} points.");
+                    Console.WriteLine($"{player2} scored {roundScore}. The score is now {player1}: {player1Score} to {player2}: {player2Score}");
                     Console.WriteLine();
                     endCondition = ScoreUpdater.WinCondition(player2Score, maxScore);
                     player = 1;
@@ -79,12 +79,14 @@ public class StraightPool
             {
                 Console.WriteLine($"{player1} won with a score of {player1Score} to {player2Score}.");
                 Console.WriteLine();
+                ScoreHistory.AddToHistory(player1);
                 p1Wins += 1;
             }
             else
             {
                 Console.WriteLine($"{player2} won with a score of {player2Score} to {player1Score}.");
                 Console.WriteLine();
+                ScoreHistory.AddToHistory(player2);
                 p2Wins += 1;
             }
             ScoreHistory.DisplayWins(player1, player2, p1Wins, p2Wins);

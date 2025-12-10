@@ -1,8 +1,21 @@
-﻿public static class Program
+﻿using Microsoft.Data.Sqlite;
+public class Program
 {
-
+    static String connString = "Data Source = poolHistory.db";
     internal static void Main(string[] args)
     {
+        using (var connection = new SqliteConnection(connString))
+        {
+            connection.Open();
+            var tableCommand = connection.CreateCommand();
+            tableCommand.CommandText = @"CREATE TABLE IF NOT EXISTS Pool_History(
+                                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                        PlayerName TEXT UNIQUE,
+                                        Wins INTEGER)";
+            tableCommand.ExecuteNonQuery();
+            connection.Close();
+        }
+        
         Initialization();
     }
 
@@ -23,9 +36,12 @@
 
     internal static void MainMenu(string player1, string player2)
     {
+        Console.Clear();
         Console.WriteLine($"{player1} and {player2}, what game do you want to play? Pick an option from below.");
         Console.WriteLine("1. Play Straight pool");
         Console.WriteLine("2. Play snooker");
+        Console.WriteLine("3. View History");
+        Console.WriteLine("4. Exit");
 
         string userInput = Console.ReadLine()!;
         bool validInput = false;
@@ -45,6 +61,14 @@
             {
                 Snooker.PlaySnooker(player1, player2);
                 //userInput = Console.ReadLine()!;
+            }
+            else if(userInput == "3")
+            {
+                ScoreHistory.ViewHistory(player1, player2);
+            }
+            else if(userInput == "4")
+            {
+                Environment.Exit(0);
             }
             else
             {

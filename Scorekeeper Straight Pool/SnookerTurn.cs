@@ -16,7 +16,7 @@ public class SnookerTurn
             }
             else if (response.Trim().ToLower() == "f")
             {
-                //Console.WriteLine("Game over.");
+                
                 validInput = true;
                 return -10000;
             }
