@@ -94,7 +94,7 @@ public class StraightPool
 
             Console.WriteLine("Please choose an option from below:");
             Console.WriteLine("\t1: Play Straight Pool again?");
-            Console.WriteLine("\t2: Play another game.");
+            Console.WriteLine("\t2: Return to the main menu.");
             Console.WriteLine("\t3: Quit the application.");
 
             string response = Console.ReadLine()!;
